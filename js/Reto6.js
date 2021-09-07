@@ -20,7 +20,7 @@ function calcularmedia(){
     var media = (suma/array.length).toFixed(2);
 
     for(let i = 0; i<array.length; i++){
-        sumaar += ((Number(array[i])-media)**2).toFixed(2);
+        sumaar += ((Number(array[i])-media)**2);
     }
 
    var sm = (sumaar/array.length)**(1/2);
