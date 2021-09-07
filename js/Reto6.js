@@ -20,11 +20,11 @@ function calcularmedia(){
     var media = (suma/array.length).toFixed(2);
 
     for(let i = 0; i<array.length; i++){
-        sumaar += (Number(array[i])-media)**2;
+        sumaar += ((Number(array[i])-media)**2).toFixed(2);
     }
 
-   var sm = 
-    document.getElementById("salida6").innerHTML = "la media de su muestra de números es: " + media + " y su desviación estandar es "
+   var sm = (sumaar/array.length)**(1/2);
+    document.getElementById("salida6").innerHTML = "la media de su muestra de números es: " + media + " y su desviación estandar es " + sm;
     console.log(sumaar)
 }
 
