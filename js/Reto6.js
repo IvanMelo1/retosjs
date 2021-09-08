@@ -5,11 +5,8 @@ function calcularmedia(){
     suma = 0;
     sumaar = 0;
     muestra = document.getElementById('muestra-no').value;
-    for(let i = 0; i<muestra.length; i++){
-        muestra = muestra.replace("," , "");
-    }
-    
-    let array = muestra.split("");
+
+    let array = muestra.split(",");
 
     console.log(array);
 
@@ -17,14 +14,16 @@ function calcularmedia(){
         suma += Number(array[i]);
     }    
     
-    var media = (suma/array.length).toFixed(2);
+    var media = (suma/array.length);
 
     for(let i = 0; i<array.length; i++){
         sumaar += ((Number(array[i])-media)**2);
     }
 
-   var sm = (sumaar/array.length)**(1/2);
-    document.getElementById("salida6").innerHTML = "la media de su muestra de números es: " + media + " y su desviación estandar es " + sm;
-    console.log(sumaar)
-}
+   let ds = Math.sqrt(sumaar/(array.length-1));
+   let desviacións = ds.toFixed(2);
+    document.getElementById("salida6").innerHTML = "la media de su muestra de números es: " + media + " y su desviación estandar es " + ds;
+    console.log(suma);
+    console.log(sumaar);
+    }
 
