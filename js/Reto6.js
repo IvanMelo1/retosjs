@@ -5,7 +5,7 @@ function calcularmedia(){
     suma = 0;
     sumaar = 0;
     muestra = document.getElementById('muestra-no').value;
-
+    muestra=muestra.trim();
     let array = muestra.split(",");
 
     console.log(array);
